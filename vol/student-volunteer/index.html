@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Telshan Fernando - IT Support, Student Support Volunteer and Technical Mentor based in Sri Lanka.">
+
+<title>Telshan Fernando | Student Support Volunteer</title>
+
+<style>
+:root {
+    --primary: #2563eb;
+    --secondary: #06b6d4;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --text: #475569;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Arial, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #2563eb
+    );
+    color: white;
+    padding: 110px 0;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #67e8f9;
+}
+
+.hero h2 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 17px;
+    color: #e2e8f0;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: #06b6d4;
+    color: #082f49;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: var(--text);
+    max-width: 650px;
+    margin: auto;
+}
+
+.section-heading .line {
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 18px auto;
+    border-radius: 5px;
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.info-card {
+    background: #eff6ff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #bfdbfe;
+}
+
+.info-card h3 {
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 18px;
+}
+
+.info-item strong {
+    display: block;
+    color: var(--dark);
+}
+
+.info-item span {
+    color: var(--text);
+}
+
+/* SUPPORT CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    border-color: #93c5fd;
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--text);
+    font-size: 15px;
+}
+
+/* SKILLS */
+
+.skills {
+    background: white;
+}
+
+.skill-category {
+    margin-bottom: 35px;
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 9px 17px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #dbeafe;
+}
+
+/* EDUCATION */
+
+.education {
+    background: #f1f5f9;
+}
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+}
+
+.timeline-item {
+    background: white;
+    border-left: 4px solid var(--primary);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
+}
+
+.timeline-item h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.timeline-item h4 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.timeline-item .date {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.timeline-item p {
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+/* EXPERIENCE */
+
+.experience {
+    background: white;
+}
+
+.experience-box {
+    max-width: 850px;
+    margin: auto;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.experience-box h3 {
+    font-size: 23px;
+}
+
+.experience-box h4 {
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+.experience-box ul {
+    padding-left: 22px;
+    color: var(--text);
+}
+
+.experience-box li {
+    margin-bottom: 12px;
+}
+
+/* PROJECT */
+
+.project {
+    background: #f1f5f9;
+}
+
+.project-card {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.project-top {
+    background: linear-gradient(135deg,#1e40af,#06b6d4);
+    color: white;
+    padding: 35px;
+}
+
+.project-top h3 {
+    font-size: 24px;
+}
+
+.project-content {
+    padding: 35px;
+}
+
+.project-content p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--dark);
+    color: white;
+}
+
+.contact .section-heading h2 {
+    color: white;
+}
+
+.contact .section-heading p {
+    color: #94a3b8;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.contact-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    overflow-wrap: anywhere;
+    transition: .3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: #273449;
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: #67e8f9;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-card p {
+    color: #cbd5e1;
+}
+
+/* WHATSAPP */
+
+.whatsapp-card {
+    border: 1px solid #25d366;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background: #25d366;
+    color: white !important;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 18px;
+    transition: .3s;
+}
+
+.whatsapp-button:hover {
+    background: #1da851;
+    transform: translateY(-3px);
+    text-decoration: none !important;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+    z-index: 999;
+    transition: .3s;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    background: #1da851;
+}
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .floating-whatsapp {
+        width: 52px;
+        height: 52px;
+        bottom: 18px;
+        right: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="container nav-container">
+
+        <div class="logo">
+            TELSHAN.
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#support">Support</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🎓 Aspiring Student Support Volunteer
+            </div>
+
+            <h1>
+                Hello, I'm<br>
+                <span>Telshan Fernando</span>
+            </h1>
+
+            <h2>
+                IT Support | Technical Support |
+                Student Support Volunteer
+            </h2>
+
+            <p>
+                An enthusiastic IT-trained individual
+                passionate about technology, education,
+                and helping students overcome technical
+                challenges.
+
+                I enjoy sharing knowledge, supporting
+                classmates, and making technology
+                easier for everyone.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#support"
+                   class="btn btn-primary">
+                    Explore My Support Skills
+                </a>
+
+                <a href="#contact"
+                   class="btn btn-secondary">
+                    Contact Me
+                </a>
+
+                <a href="https://wa.me/94740823773"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-primary">
+                    💬 WhatsApp Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="line"></div>
+            <p>
+                Technology enthusiast, student supporter,
+                and aspiring IT professional.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    My name is <strong>Telshan Fernando</strong>,
+                    and I am an IT-trained individual
+                    from Matale, Sri Lanka.
+                </p>
+
+                <p>
+                    I have studied Software Engineering,
+                    Artificial Intelligence, and
+                    Computer Science, developing
+                    knowledge in programming,
+                    databases, troubleshooting,
+                    and digital technologies.
+                </p>
+
+                <p>
+                    During my software engineering studies,
+                    I assisted fellow students with
+                    debugging, software-related problems,
+                    and technical challenges.
+                </p>
+
+                <p>
+                    These experiences strengthened my
+                    communication, teamwork, and
+                    problem-solving abilities.
+                </p>
+
+                <p>
+                    As an aspiring Student Support Volunteer,
+                    I hope to help students develop
+                    technical confidence, overcome
+                    learning challenges, and achieve
+                    their educational goals.
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>Personal Information</h3>
+
+                <div class="info-item">
+                    <strong>Full Name</strong>
+                    <span>
+                        Masewge Telshan Dhananjana Fernando
+                    </span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Location</strong>
+                    <span>Matale, Sri Lanka</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Nationality</strong>
+                    <span>Sri Lankan</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Languages</strong>
+                    <span>
+                        English - Advanced<br>
+                        Sinhala - Native
+                    </span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Career Interests</strong>
+                    <span>
+                        IT Support, Technical Support,
+                        Student Support and Technology
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STUDENT SUPPORT -->
+
+<section id="support">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>How I Can Support Students</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Using my technical knowledge and
+                communication skills to help students
+                with everyday academic and technology
+                challenges.
+            </p>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Technical Support</h3>
+                <p>
+                    Helping students troubleshoot
+                    basic computer, software,
+                    and operating system problems.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Academic Technology Support</h3>
+                <p>
+                    Supporting students with
+                    programming fundamentals,
+                    software tools, and technical
+                    learning resources.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧑‍💻</div>
+                <h3>Programming Assistance</h3>
+                <p>
+                    Assisting classmates with
+                    basic coding problems,
+                    debugging, and understanding
+                    programming concepts.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <h3>AI & Digital Tools</h3>
+                <p>
+                    Sharing knowledge about
+                    generative AI, prompt engineering,
+                    and practical digital tools
+                    for learning.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h3>Peer Support</h3>
+                <p>
+                    Encouraging teamwork,
+                    knowledge sharing,
+                    and collaborative learning
+                    among students.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Problem Solving</h3>
+                <p>
+                    Helping students identify
+                    technical problems and
+                    approach solutions
+                    systematically.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="skills" id="skills">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Technical & Professional Skills</h2>
+            <div class="line"></div>
+            <p>
+                Skills developed through academic
+                training and practical projects.
+            </p>
+        </div>
+
+        <div class="skill-category">
+
+            <h3>IT & Technical Support</h3>
+
+            <div class="skill-tags">
+                <span class="skill-tag">IT Troubleshooting</span>
+                <span class="skill-tag">Software Installation</span>
+                <span class="skill-tag">Software Configuration</span>
+                <span class="skill-tag">Windows</span>
+                <span class="skill-tag">macOS</span>
+                <span class="skill-tag">Basic Networking</span>
+                <span class="skill-tag">Technical Problem Solving</span>
+                <span class="skill-tag">Software Testing</span>
+                <span class="skill-tag">Debugging</span>
+            </div>
+
+        </div>
+
+        <div class="skill-category">
+
+            <h3>Programming & Development</h3>
+
+            <div class="skill-tags">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">Supabase</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Database Management</span>
+                <span class="skill-tag">Database Design</span>
+                <span class="skill-tag">RStudio</span>
+            </div>
+
+        </div>
+
+        <div class="skill-category">
+
+            <h3>Artificial Intelligence</h3>
+
+            <div class="skill-tags">
+                <span class="skill-tag">Generative AI</span>
+                <span class="skill-tag">AI Prompt Engineering</span>
+                <span class="skill-tag">AI Fundamentals</span>
+                <span class="skill-tag">AI Model Behavior</span>
+                <span class="skill-tag">Practical AI Applications</span>
+            </div>
+
+        </div>
+
+        <div class="skill-category">
+
+            <h3>Professional Skills</h3>
+
+            <div class="skill-tags">
+                <span class="skill-tag">Student Support</span>
+                <span class="skill-tag">Customer Support</span>
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Team Collaboration</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Presentation Skills</span>
+                <span class="skill-tag">Time Management</span>
+                <span class="skill-tag">Adaptability</span>
+                <span class="skill-tag">Microsoft Office</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="education" id="education">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Education & Certifications</h2>
+            <div class="line"></div>
+            <p>
+                My academic background in
+                technology and software engineering.
+            </p>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+                    Diploma in Artificial Intelligence
+                    with Computer Science
+                </h3>
+
+                <h4>KIC NIBM, Kandy</h4>
+
+                <div class="date">
+                    July 2025 - On Hold
+                </div>
+
+                <p>
+                    Studied artificial intelligence,
+                    computer science, programming
+                    fundamentals, algorithms,
+                    and computer systems.
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+                    Software Engineering Foundation
+                </h3>
+
+                <h4>NIBM, Kurunegala</h4>
+
+                <div class="date">
+                    February 2025 - June 2025
+                </div>
+
+                <p>
+                    Studied programming, databases,
+                    software design, development,
+                    and testing.
+                </p>
+
+                <p>
+                    Completed more than five academic
+                    projects and developed a
+                    Book Library Management System.
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+                    AI Prompt Engineering Certification
+                </h3>
+
+                <h4>
+                    One Million Prompters Initiative
+                    - Dubai
+                </h4>
+
+                <p>
+                    Successfully completed training
+                    in AI prompt engineering,
+                    generative AI applications,
+                    and human-AI interaction.
+                </p>
+
+                <p>
+                    The initiative was launched under
+                    the patronage of H.H. Sheikh Hamdan
+                    bin Mohammed bin Rashid Al Maktoum.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Practical Experience</h2>
+            <div class="line"></div>
+            <p>
+                Academic experience in software
+                development and peer technical support.
+            </p>
+        </div>
+
+        <div class="experience-box">
+
+            <h3>Software Engineering Student</h3>
+
+            <h4>NIBM, Kandy</h4>
+
+            <p style="color:#64748b;margin-bottom:20px;">
+                February 2025 - December 2025
+            </p>
+
+            <ul>
+
+                <li>
+                    Applied software engineering
+                    principles through academic
+                    assignments and projects.
+                </li>
+
+                <li>
+                    Developed and tested software
+                    using programming and database
+                    concepts.
+                </li>
+
+                <li>
+                    Assisted fellow students
+                    with debugging and basic
+                    technical problems.
+                </li>
+
+                <li>
+                    Practiced systematic
+                    troubleshooting and
+                    problem solving.
+                </li>
+
+                <li>
+                    Collaborated with classmates
+                    to complete projects within
+                    academic deadlines.
+                </li>
+
+                <li>
+                    Explained technical concepts
+                    clearly to fellow students
+                    and project teams.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECT -->
+
+<section class="project" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Academic Project</h2>
+            <div class="line"></div>
+            <p>
+                Practical application of
+                software engineering knowledge.
+            </p>
+        </div>
+
+        <div class="project-card">
+
+            <div class="project-top">
+
+                <h3>
+                    📚 Book Library Management System
+                </h3>
+
+                <p>
+                    Software Engineering Academic Project
+                </p>
+
+            </div>
+
+            <div class="project-content">
+
+                <p>
+                    Developed a functional Book Library
+                    Management System as part of
+                    software engineering studies.
+                </p>
+
+                <p>
+                    The project provided practical
+                    experience in C# programming,
+                    application logic, data management,
+                    software testing, and troubleshooting.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Software Development</span>
+                    <span class="skill-tag">Data Management</span>
+                    <span class="skill-tag">Testing</span>
+                    <span class="skill-tag">Debugging</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Let's Connect</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Interested in student support,
+                technology, volunteering,
+                or professional collaboration?
+                Feel free to contact me.
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <h3>📧 Email</h3>
+
+                <a href="mailto:telshan200425@icloud.com">
+                    telshan200425@icloud.com
+                </a>
+
+            </div>
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card whatsapp-card">
+
+                <h3>💬 WhatsApp</h3>
+
+                <p>
+                    Have a question or need
+                    technical support?
+                </p>
+
+                <p>
+                    074 082 3773
+                </p>
+
+                <a
+                    href="https://wa.me/94740823773"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whatsapp-button">
+                    💬 Chat on WhatsApp
+                </a>
+
+            </div>
+
+            <!-- LINKEDIN -->
+
+            <div class="contact-card">
+
+                <h3>💼 LinkedIn</h3>
+
+                <a href="https://www.linkedin.com/in/telshanfernando"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    linkedin.com/in/telshanfernando
+                </a>
+
+            </div>
+
+            <!-- PORTFOLIO -->
+
+            <div class="contact-card">
+
+                <h3>🌐 Personal Portfolio</h3>
+
+                <a href="https://my-portfolio-ten-lilac-k1x0cb2icf.vercel.app"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit My Portfolio ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FLOATING WHATSAPP -->
+
+<a href="https://wa.me/94740823773"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="floating-whatsapp"
+   aria-label="Chat with Telshan on WhatsApp"
+   title="Chat on WhatsApp">
+    💬
+</a>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Telshan Fernando.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            IT Support | Student Support Volunteer |
+            Technology Enthusiast
+        </p>
+
+        <p>
+            Matale, Sri Lanka 🇱🇰
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
